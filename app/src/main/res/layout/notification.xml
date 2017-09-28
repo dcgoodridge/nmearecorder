@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/notification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/notification_button_prev"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@mipmap/icono_gris"
+            />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:textColor="#787878"
+            android:id="@+id/notification_text_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Recording NMEA sentences"
+            android:textStyle="bold"
+            android:ellipsize="end"
+            android:lines="1"
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

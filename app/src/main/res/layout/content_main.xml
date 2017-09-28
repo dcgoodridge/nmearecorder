@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical"
+    android:keepScreenOn="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+
+    tools:showIn="@layout/activity_main">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+        <ListView
+            android:id="@+id/listview_nmea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#0000"
+            android:stackFromBottom="true"
+            android:listSelector="@drawable/selector_main"
+            android:transcriptMode="alwaysScroll">
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/gps_is_off_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#b000"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="15dp"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ubicación GPS deshabilitada"
+                android:textColor="#fff"
+                android:textSize="24sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Para recibir los mensajes NMEA del dispositivo GPS, se debe activar el modo de Ubicación por GPS en ajustes."
+                android:textColor="#fff"
+                android:textSize="12sp"/>
+
+            <Button
+                android:id="@+id/gps_is_off_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajustes"
+                />
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_start"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Grabar"
+            />
+
+        <Button
+            android:id="@+id/button_stop"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Detener"
+            />
+    </LinearLayout>
+</LinearLayout>
